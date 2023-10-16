@@ -24,7 +24,7 @@ const checkWidth_HeightValidation =
             return res.status(400).json({ error: 'Invalid width or height' });
         }
 
-        if(parseInt(width as string) > screenwidth || parseInt(height as string) > screenheight){
+        if(parseInt(width as string) > screenwidth+350 || parseInt(height as string) > screenheight){
             return res.status(400).json({ error: 'width or height are higher than screen size' });
         }
         else{
